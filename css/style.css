@@ -825,3 +825,9 @@ html { overflow-x: hidden; }
 /* Tea image stays inside its own box (never covers the tea name) */
 .tea-img { height: 125px; overflow: hidden; }
 .tea-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+
+/* ================= DARKER CUP PICTURE ================= */
+.moments-image img {
+    filter: brightness(0.85) contrast(1.7) saturate(1.2);
+}
