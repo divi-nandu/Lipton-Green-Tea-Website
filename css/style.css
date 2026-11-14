@@ -858,3 +858,9 @@ html { overflow-x: hidden; }
 
 /* footer leaf keeps its shadow and gets the same dark look */
 .footer-leaf { filter: var(--dark-photo) drop-shadow(0 8px 14px rgba(40, 70, 20, 0.2)); }
+
+
+/* ================= SPARKLE ICON IN FIND YOUR TEA BUTTON ================= */
+.btn-lipton { display: inline-flex; align-items: center; gap: 6px; }
+.spark { display: inline-flex; margin-left: 0; color: var(--brown); }
+.spark svg { width: 15px; height: 15px; }
