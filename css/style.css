@@ -831,3 +831,30 @@ html { overflow-x: hidden; }
 .moments-image img {
     filter: brightness(0.85) contrast(1.7) saturate(1.2);
 }
+
+
+/* ================= SAME DARK LOOK FOR ALL PICTURES ================= */
+:root { --dark-photo: brightness(0.85) contrast(1.7) saturate(1.2); }
+
+/* tea cards + suggestion picture + cup picture */
+.tea-img img,
+.recommendation-image,
+.moments-image img { filter: var(--dark-photo); }
+
+/* hero picture: moved to ::before so the text is not darkened */
+.hero-section { background-image: none; }
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/green-tea-hero.png") 70% center / cover no-repeat;
+    filter: var(--dark-photo);
+}
+
+@media (max-width: 576px) {
+    .hero-section::before { background-position: 75% center; }
+}
+
+/* footer leaf keeps its shadow and gets the same dark look */
+.footer-leaf { filter: var(--dark-photo) drop-shadow(0 8px 14px rgba(40, 70, 20, 0.2)); }
